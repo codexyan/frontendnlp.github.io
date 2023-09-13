@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+/* header */
+
+header {
+    text-align: center;
+    margin: 12px 0px;
+}
+
+.wrap {
+    padding: 12px 0px;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #ffb13b 0%, #FF2525 74%);
+    width: 768px;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 100px;
+}
+
+
+/* main */
+
+.hero {
+    margin: 0;
+    text-align: center;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+}
+
+.satu {
+    background-color: red;
+}
+
+.dua {
+    background-color: yellow;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+.tiga {
+    background-color: green;
+}
