@@ -117,10 +117,6 @@ header {
     color: white;
 }
 
-.content-hero p {
-    text-align: center;
-}
-
 /* Card */
 .product {
     margin: 20px 0px;
@@ -269,4 +265,48 @@ footer {
 
 .bottom-footer p {
     text-align: center;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 500px) {
+    /* header */
+    .logo {
+        width: 20%;
+    }
+
+    .status-icon {
+        width: 50%;
+    }
+
+    .status-icon .circle {
+        width: 16px;
+        height: 16px;
+    }
+
+    .status-icon p {
+        font-size: 16px;
+    }
+
+    .status-icon p .status {
+        font-size: 16px;
+    }
+
+    .status-icon p .address {
+        font-size: 10px;
+    }
+
+    /* hero */
+    .hero .images {
+        height: 120px;
+    }
+
+    .content-hero h1 {
+        font-size: 20px;
+    }
+
+    /* navigation */
+    .swipper a {
+        font-size: 12px;
+    }
 }
