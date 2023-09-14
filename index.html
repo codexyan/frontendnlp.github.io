@@ -1,39 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>afocat</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALPages</title>
-    <link rel="stylesheet" href="assets/styles/styles.css">
-</head>
-
-<body>
+  <body>
     <header>
-        <div class="wrap">
-            <img src="assets/img/logo.png" alt="logo.png" class="logo">
+      <div class="wrap">
+        <img src="assets/img/logo.png" alt="logo.png" class="logo" />
+        <div class="status-icon">
+          <div class="circle"></div>
+          <p>Status : 
+            <span class="status">Buka</span>
+            <span class="address">[ Depan Puskesmas 1 Imogiri ]</span>
+          </p>
         </div>
+      </div>
     </header>
 
     <main>
-        <div class="container">
-            <div class="hero">
-                <img src="assets/img/hero.png" alt="hero.png" class="hero">
-                <h4>Selamat Datang di Alfin Food Court!</h4>
-                <p>Monggo mau pesan apa?</p>
+      <div class="container">
+
+        <div class="hero">
+          <div class="images">
+            <div class="bg-images"></div>
+          </div>
+          <div class="content-hero">
+            <h1>
+              Sugeng Rawuh
+              <span class="name">Alfin Food Catering</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="navigation">
+            <div class="swipper">
+                <a href="#">Kue-Kue</a>
+                <a href="#">Jajanan Tradisional</a>
+                <a href="#">Aneka Snack</a>
             </div>
         </div>
 
-        <div class="box satu"></div>
-        <div class="box dua"></div>
-        <div class="box tiga"></div>
+        <div class="product">
+          <div class="list-product">
+            <!-- Card -->
+            <div class="card">
+              <div class="col">
+                <div class="header">
+                  <img
+                    src="assets/img/hero.png"
+                    alt="card.png"
+                    class="card-img"
+                  />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <h2 class="title">Balok Lumer Original</h2>
+                    <div class="review">
+                      <p class="text-review">
+                        700 pcs terjual | Disukai oleh 500
+                      </p>
+                    </div>
+                    <p class="price">Rp 3.000</p>
+                  </div>
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      class="cta-like"
+                    >
+                      <path
+                        d="M12.5 6.66669C7.43748 6.66669 3.33331 10.7709 3.33331 15.8334C3.33331 25 14.1666 33.3334 20 35.2717C25.8333 33.3334 36.6666 25 36.6666 15.8334C36.6666 10.7709 32.5625 6.66669 27.5 6.66669C24.4 6.66669 21.6583 8.20586 20 10.5617C19.1547 9.35769 18.0318 8.3751 16.7263 7.69709C15.4207 7.01909 13.9711 6.66565 12.5 6.66669Z"
+                        stroke="gray"
+                        stroke-width="0.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="cta-pesan" type="submit">
+                    Tambahkan Pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="col">
+                <div class="header">
+                  <img
+                    src="assets/img/hero.png"
+                    alt="card.png"
+                    class="card-img"
+                  />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <h2 class="title">Balok Lumer Original</h2>
+                    <div class="review">
+                      <p class="text-review">
+                        700 pcs terjual | Disukai oleh 500
+                      </p>
+                    </div>
+                    <p class="price">Rp 3.000</p>
+                  </div>
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      class="cta-like"
+                    >
+                      <path
+                        d="M12.5 6.66669C7.43748 6.66669 3.33331 10.7709 3.33331 15.8334C3.33331 25 14.1666 33.3334 20 35.2717C25.8333 33.3334 36.6666 25 36.6666 15.8334C36.6666 10.7709 32.5625 6.66669 27.5 6.66669C24.4 6.66669 21.6583 8.20586 20 10.5617C19.1547 9.35769 18.0318 8.3751 16.7263 7.69709C15.4207 7.01909 13.9711 6.66565 12.5 6.66669Z"
+                        stroke="gray"
+                        stroke-width="0.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="cta-pesan" type="submit">
+                    Tambahkan Pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="col">
+                <div class="header">
+                  <img
+                    src="assets/img/hero.png"
+                    alt="card.png"
+                    class="card-img"
+                  />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <h2 class="title">Balok Lumer Original</h2>
+                    <div class="review">
+                      <p class="text-review">
+                        700 pcs terjual | Disukai oleh 500
+                      </p>
+                    </div>
+                    <p class="price">Rp 3.000</p>
+                  </div>
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      class="cta-like"
+                    >
+                      <path
+                        d="M12.5 6.66669C7.43748 6.66669 3.33331 10.7709 3.33331 15.8334C3.33331 25 14.1666 33.3334 20 35.2717C25.8333 33.3334 36.6666 25 36.6666 15.8334C36.6666 10.7709 32.5625 6.66669 27.5 6.66669C24.4 6.66669 21.6583 8.20586 20 10.5617C19.1547 9.35769 18.0318 8.3751 16.7263 7.69709C15.4207 7.01909 13.9711 6.66565 12.5 6.66669Z"
+                        stroke="gray"
+                        stroke-width="0.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="cta-pesan" type="submit">
+                    Tambahkan Pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="col">
+                <div class="header">
+                  <img
+                    src="assets/img/hero.png"
+                    alt="card.png"
+                    class="card-img"
+                  />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <h2 class="title">Balok Lumer Original</h2>
+                    <div class="review">
+                      <p class="text-review">
+                        700 pcs terjual | Disukai oleh 500
+                      </p>
+                    </div>
+                    <p class="price">Rp 3.000</p>
+                  </div>
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      class="cta-like"
+                    >
+                      <path
+                        d="M12.5 6.66669C7.43748 6.66669 3.33331 10.7709 3.33331 15.8334C3.33331 25 14.1666 33.3334 20 35.2717C25.8333 33.3334 36.6666 25 36.6666 15.8334C36.6666 10.7709 32.5625 6.66669 27.5 6.66669C24.4 6.66669 21.6583 8.20586 20 10.5617C19.1547 9.35769 18.0318 8.3751 16.7263 7.69709C15.4207 7.01909 13.9711 6.66565 12.5 6.66669Z"
+                        stroke="gray"
+                        stroke-width="0.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="cta-pesan" type="submit">
+                    Tambahkan Pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="col">
+                <div class="header">
+                  <img
+                    src="assets/img/hero.png"
+                    alt="card.png"
+                    class="card-img"
+                  />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <h2 class="title">Balok Lumer Original</h2>
+                    <div class="review">
+                      <p class="text-review">
+                        700 pcs terjual | Disukai oleh 500
+                      </p>
+                    </div>
+                    <p class="price">Rp 3.000</p>
+                  </div>
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      class="cta-like"
+                    >
+                      <path
+                        d="M12.5 6.66669C7.43748 6.66669 3.33331 10.7709 3.33331 15.8334C3.33331 25 14.1666 33.3334 20 35.2717C25.8333 33.3334 36.6666 25 36.6666 15.8334C36.6666 10.7709 32.5625 6.66669 27.5 6.66669C24.4 6.66669 21.6583 8.20586 20 10.5617C19.1547 9.35769 18.0318 8.3751 16.7263 7.69709C15.4207 7.01909 13.9711 6.66565 12.5 6.66669Z"
+                        stroke="gray"
+                        stroke-width="0.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="cta-pesan" type="submit">
+                    Tambahkan Pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="col">
+                <div class="header">
+                  <img
+                    src="assets/img/hero.png"
+                    alt="card.png"
+                    class="card-img"
+                  />
+                </div>
+                <div class="content">
+                  <div class="description">
+                    <h2 class="title">Balok Lumer Original</h2>
+                    <div class="review">
+                      <p class="text-review">
+                        700 pcs terjual | Disukai oleh 500
+                      </p>
+                    </div>
+                    <p class="price">Rp 3.000</p>
+                  </div>
+                  <div class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      class="cta-like"
+                    >
+                      <path
+                        d="M12.5 6.66669C7.43748 6.66669 3.33331 10.7709 3.33331 15.8334C3.33331 25 14.1666 33.3334 20 35.2717C25.8333 33.3334 36.6666 25 36.6666 15.8334C36.6666 10.7709 32.5625 6.66669 27.5 6.66669C24.4 6.66669 21.6583 8.20586 20 10.5617C19.1547 9.35769 18.0318 8.3751 16.7263 7.69709C15.4207 7.01909 13.9711 6.66565 12.5 6.66669Z"
+                        stroke="gray"
+                        stroke-width="0.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="cta">
+                  <button class="cta-pesan" type="submit">
+                    Tambahkan Pesanan
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </main>
 
     <aside></aside>
 
-    <footer></footer>
+    <footer>
+        <div class="bottom-footer">
+            <p>Develop by nakamaiyan 2023</p>
+        </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
