@@ -8,113 +8,66 @@ body {
     font-family: sans-serif;
     max-width: 768px;
     border: 1px solid rgb(226, 226, 226);
+    color: F1F1F1;
 }
 
 /* header */
-
 header {
     text-align: center;
-    margin: 16px 0px;
 }
 
 .wrap {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    align-self: stretch;
+    gap: 199px;
     padding: 12px 0px;
-    background: radial-gradient(circle at 10% 20%, rgb(255, 177, 68) 0%, rgb(252, 251, 121) 90%);
-    margin: 0px 8px;
-    border-radius: 8px;
+    background: linear-gradient(90deg, #502F2F 0%, #503000 100%);
 }
 
 .logo {
     width: 100px;
 }
 
-.status-icon {
-    display: flex;
-    width: 70%;
-    justify-content: flex-end;
-    align-items: flex-start;
-    /* border: 1px solid red; */
+.toggle {
+    border-radius: 4px;
+    background: rgba(237, 237, 237, 0.20);
+    width: 32px;
+    height: 32px;
 }
 
-.status-icon .circle {
+.toggle span {
+    height: 2px;
     width: 20px;
-    height: 20px;
-    background-color: rgb(0, 168, 0);
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
-    margin: 4px;
-}
+    stroke-width: 2px;
+    stroke: #FFF;
 
-.status-icon p {
-    margin: 0px 8px;
-    font-weight: semibold;
-    text-align: left;
-    font-size: 24px;
-}
-
-.status-icon p .status {
-    font-weight: bold;
-    color: green;
-    font-size: 24px;
-}
-
-.status-icon p .address {
-    margin-top: 4px;
-    display: block;
-    font-size: 12px;
 }
 
 /* main */
-
 .hero {
     display: flex;
     align-items: center;
-    margin: 0px 8px 24px 8px;
+    margin: 0px 16px 0px 16px;
+    background-color: white;
+    /* border: 1px solid red; */
 }
 
 .hero .images {
-    position: relative;
-    overflow: hidden;
     width: 100%;
-    height: 200px;
+    height: 100%;
     /* border: 1px solid red; */
-    max-height: 200px;
     border-radius: 8px;
 }
 
 .hero .images .bg-images {
     width: 100%;
     height: 100%;
-    background-image: url("../img/hero.png");
-    background-size: cover;
+    background-image: url("../img/banner.svg");
+    background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.content-hero {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.content-hero .name {
-    display: inline-block;
-    font-weight: bold;
-    color: rgb(56, 56, 56);
-}
-
-.content-hero h1 {
-    text-align: center;
-    margin-bottom: 12px;
-    color: white;
 }
 
 /* Card */
@@ -234,25 +187,6 @@ header {
     height: 50%;
 }
 
-/* navigation */
-.swipper {
-    margin: 8px;
-}
-.swipper a {
-    text-decoration: none;
-    padding: 12px 12px;
-    background-color: rgb(207, 207, 207);
-    color: white;
-    border-radius: 4px;
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
-}
-
-.swipper a:hover {
-    background-color: orangered;
-}
-
 /* Footer */
 footer {
     background-color: black;
@@ -268,8 +202,8 @@ footer {
 }
 
 /* Responsive */
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 500px) {
     /* header */
     .logo {
         width: 20%;
@@ -299,10 +233,6 @@ footer {
     /* hero */
     .hero .images {
         height: 120px;
-    }
-
-    .content-hero h1 {
-        font-size: 20px;
     }
 
     /* navigation */
