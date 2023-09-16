@@ -36,17 +36,26 @@ header {
     padding: 16px;
 }
 
-.hero-container .row {
+.hero-container .col {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+}
+
+.hero-container .col .row {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
+
+    padding: 8px 0px;
+    border: 1px solid red;
 }
 
 .hero-container .col .row .position {
     display: flex;
     gap: 0px 8px;
     align-items: center;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 
 }
 
@@ -62,6 +71,15 @@ header {
     font-size: 12px;
     font-weight: bold;
     color: brown;
+}
+
+@media screen and (max-width: 375px) { 
+    .hero-container .col {
+        padding: 0px 16px;
+    }
+    .hero-container .col .banner-img {
+        max-width: 358px;
+    }
 }
 
 /* Card */
