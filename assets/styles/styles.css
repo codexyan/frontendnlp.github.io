@@ -32,14 +32,23 @@ header {
 
 /* main */
 .hero-container {
-    padding: 16px 16px 0px 16px;
+    /* padding: 16px 16px 0px 16px; */
     background-color: white;
 }
 
 .hero-container .col {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
+}
+
+.hero-container .col .banner-img {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.hero-container .col .banner-img img {
+    width: 100%;
 }
 
 .hero-container .col .row {
@@ -81,13 +90,9 @@ header {
     color: brown;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 448px) {
     .hero-container .col {
         padding: 0px 16px;
-    }
-
-    .hero-container .col .banner-img {
-        max-width: 358px;
     }
 }
 
