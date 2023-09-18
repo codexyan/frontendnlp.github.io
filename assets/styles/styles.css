@@ -32,18 +32,18 @@ header {
 
 /* main */
 .hero-container {
-    /* padding: 16px 16px 0px 16px; */
+    padding: 16px 16px 0px 16px;
     background-color: white;
 }
 
 .hero-container .col {
     display: flex;
     flex-direction: column;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .hero-container .col .banner-img {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
 }
 
@@ -90,10 +90,8 @@ header {
     color: brown;
 }
 
-@media screen and (max-width: 448px) {
-    .hero-container .col {
-        padding: 0px 16px;
-    }
+@media screen and (max-width: 365px) {
+/* responsive */
 }
 
 /* Notification */
@@ -151,6 +149,24 @@ header {
     font-weight: 400;
 }
 
+@media screen and (max-width: 365px) {
+    .category .col .row {
+        display: flex;
+        overflow-x: auto;
+    }
+    .category .col .row .container {
+        flex-wrap: nowrap;
+    }
+    .category .col .row .container .catcard {
+        flex: 0 0 auto;
+        row-gap: 8px;
+    }
+
+    .category .col .row .container p {
+    font-size: 11px;
+}
+}
+
 /* Menu */
 .menu {
     background-color: #FFFAF3;
@@ -177,19 +193,23 @@ header {
 .menu .col .row .card-wrap {
     display: flex;
     flex-direction: column;
-    width: 144px;
+    flex-grow: 1;
     background-color: white;
     border-radius: 8px;
-    padding: 8px 0px;
     box-shadow: 3px 6px 8px 0px rgba(0,0,0,0.1);
 }
 
+.menu .col .row .card-wrap .wraped {
+    /* border: 1px solid red; */
+    margin: 8px;
+}
+
 .menu .col .row .card-wrap .card-wrap-img {
-    max-width: 128px;
+    width: 100%;
 }
 
 .menu .col .row .card-wrap .head {
-    margin: 8px;
+    margin: 8px 0px;
 }
 
 .menu .col .row .card-wrap .head .title {
@@ -203,7 +223,7 @@ header {
 
 .menu .col .row .card-wrap .discount {
     background-color: #E62129;
-    margin: 0px 8px;
+    margin: 8px 0px;
     width: max-content;
     border-radius: 4px;
 }
@@ -215,7 +235,7 @@ header {
 }
 
 .menu .col .row .card-wrap .price {
-    margin: 8px;
+    margin: 8px 0px;
 }
 
 .menu .col .row .card-wrap .price .number {
@@ -230,7 +250,7 @@ header {
 }
 
 .menu .col .row .card-wrap .cta-button {
-    margin: 0px 8px;
+    margin: 8px 0px 0px;
     background-color: green;
     text-align: center;
     padding: 4px;
@@ -242,6 +262,12 @@ header {
     color: white;
     font-size: 14px;
     
+}
+
+@media screen and (max-width: 365px) {
+    .menu .col .row .card-wrap {
+        flex-grow: 1;
+    }
 }
 
 /* Footer */
