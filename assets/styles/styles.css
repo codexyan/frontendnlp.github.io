@@ -213,6 +213,7 @@ header {
 }
 
 .menu .col .row .card-wrap .head .title {
+    color: #2d2d2d;
     font-weight: 600;
 }
 
@@ -235,6 +236,7 @@ header {
 }
 
 .menu .col .row .card-wrap .price {
+    color: rgb(24, 24, 24);
     margin: 8px 0px;
 }
 
@@ -293,20 +295,30 @@ footer {
 
 .bottom-footer .mitra .wrap-mitra {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 4px;
     margin: 16px 0px;
+}
+
+.bottom-footer .mitra .wrap-mitra .item {
+    display: flex;
+    text-align: center;
+    margin: 4px 8px;
+    flex: 0 0 25%s;
+}
+
+.bottom-footer .mitra .wrap-mitra .item img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .bottom-footer .divider {
     color: gray;
     margin: 24px 0px 12px 0px;
     border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
 }
 
 .bottom-footer p {
