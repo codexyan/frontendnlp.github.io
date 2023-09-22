@@ -23,5 +23,5 @@ setInterval(nextSlide, 6000)
 // CTA product
 const ctaBuy = document.querySelector("#cta-pesan")
 ctaBuy.addEventListener("click", function () {
-    
+    console.log("pesanan ditentukan!")
 })

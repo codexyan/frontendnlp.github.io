@@ -1,301 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/styles/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-</head>
+  <body>
+    <header>
+      <div class="wrap">
+        <img src="assets/img/logos.svg" alt="logo.png" class="logo" />
+      </div>
+    </header>
 
-<body>
-  <header>
-    <div class="wrap">
-      <img src="assets/img/logos.svg" alt="logo.png" class="logo" />
+    <div class="main-container">
+      <main>
+        <div class="container-content">
+          <!-- Hero -->
+          <div class="hero-container">
+            <div class="col">
+              <div class="slider">
+                <div class="banner-img">
+                  <img src="assets/img/banner-1.svg" alt="banner.svg" />
+                </div>
+                <div class="banner-img">
+                  <img src="assets/img/banner-2.svg" alt="banner.svg" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="position">
+                  <span class="circle circle-actived"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                </div>
+                <div class="cta-all">
+                  <a href="#">Lihat Semua</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hero end -->
+
+          <!-- notification -->
+          <div class="notification">
+            <img src="assets/img/cart.svg" alt="icon.svg" class="icon-not" />
+            <p>
+              HALO LUR! KUE BALOK BUKA SEKARANG DEPAN PUSKESMAS IMOGIRI SAMPAI
+              JAM 9 MALAM! Monggo gelak tutup ☺
+            </p>
+          </div>
+          <!-- end notification -->
+
+          <!-- categori -->
+          <div class="category">
+            <div class="col">
+              <h5>Pilihan Kategori</h5>
+              <div class="row">
+                <div class="container">
+                  <div class="catcard">
+                    <img
+                      src="assets/img/cat-1.svg"
+                      alt="img-category"
+                      class="img-category"
+                    />
+                    <p>Aneka Kue-Kuean</p>
+                  </div>
+                  <div class="catcard">
+                    <img
+                      src="assets/img/cat-2.svg"
+                      alt="img-category"
+                      class="img-category"
+                    />
+                    <p>Jajanan Pasar</p>
+                  </div>
+                  <div class="catcard">
+                    <img
+                      src="assets/img/cat-3.svg"
+                      alt="img-category"
+                      class="img-category"
+                    />
+                    <p>Makanan Besar</p>
+                  </div>
+                  <div class="catcard">
+                    <img
+                      src="assets/img/cat-4.svg"
+                      alt="img-category"
+                      class="img-category"
+                    />
+                    <p>Minuman</p>
+                  </div>
+                  <div class="catcard">
+                    <img
+                      src="assets/img/cat-5.svg"
+                      alt="img-category"
+                      class="img-category"
+                    />
+                    <p>Paket Pesanan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end categori -->
+
+          <!-- List Menu -->
+          <div class="menu">
+            <div class="col">
+              <h5>Spesial Hari ini</h5>
+              <p>Promo menarik hari ini</p>
+              <div class="row">
+                <div class="card-wrap">
+                  <div class="wraped">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="card-wrap.svg"
+                      class="card-wrap-img"
+                    />
+                    <div class="desc">
+                      <div class="head">
+                        <p class="title">Balok Lumer Original</p>
+                        <p class="sub-title">Harga Satuan</p>
+                      </div>
+                      <div class="discount">
+                        <p>Diskon s/d 35%</p>
+                      </div>
+                      <div class="price">
+                        <p class="number">Rp 3.000</p>
+                        <p class="sold">129 pcs terjual</p>
+                      </div>
+                    </div>
+                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                  </div>
+                </div>
+                <div class="card-wrap">
+                  <div class="wraped">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="card-wrap.svg"
+                      class="card-wrap-img"
+                    />
+                    <div class="desc">
+                      <div class="head">
+                        <p class="title">Balok Choco Crunchy</p>
+                        <p class="sub-title">Harga Satuan</p>
+                      </div>
+                      <div class="discount">
+                        <p>Diskon s/d 35%</p>
+                      </div>
+                      <div class="price">
+                        <p class="number">Rp 4.000</p>
+                        <p class="sold">129 pcs terjual</p>
+                      </div>
+                    </div>
+                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                  </div>
+                </div>
+                <div class="card-wrap">
+                  <div class="wraped">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="card-wrap.svg"
+                      class="card-wrap-img"
+                    />
+                    <div class="desc">
+                      <div class="head">
+                        <p class="title">Balok Lumer Taro</p>
+                        <p class="sub-title">Harga Satuan</p>
+                      </div>
+                      <div class="discount">
+                        <p>Diskon s/d 35%</p>
+                      </div>
+                      <div class="price">
+                        <p class="number">Rp 3.500</p>
+                        <p class="sold">129 pcs terjual</p>
+                      </div>
+                    </div>
+                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                  </div>
+                </div>
+                <div class="card-wrap">
+                  <div class="wraped">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="card-wrap.svg"
+                      class="card-wrap-img"
+                    />
+                    <div class="desc">
+                      <div class="head">
+                        <p class="title">Balok Strawberry</p>
+                        <p class="sub-title">Harga Satuan</p>
+                      </div>
+                      <div class="discount">
+                        <p>Diskon s/d 35%</p>
+                      </div>
+                      <div class="price">
+                        <p class="number">Rp 3.500</p>
+                        <p class="sold">129 pcs terjual</p>
+                      </div>
+                    </div>
+                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                  </div>
+                </div>
+                <div class="card-wrap">
+                  <div class="wraped">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="card-wrap.svg"
+                      class="card-wrap-img"
+                    />
+                    <div class="desc">
+                      <div class="head">
+                        <p class="title">Balok Lumer Keju</p>
+                        <p class="sub-title">Harga Satuan</p>
+                      </div>
+                      <div class="discount">
+                        <p>Diskon s/d 35%</p>
+                      </div>
+                      <div class="price">
+                        <p class="number">Rp 3.500</p>
+                        <p class="sold">129 pcs terjual</p>
+                      </div>
+                    </div>
+                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                  </div>
+                </div>
+                <div class="card-wrap">
+                  <div class="wraped">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="card-wrap.svg"
+                      class="card-wrap-img"
+                    />
+                    <div class="desc">
+                      <div class="head">
+                        <p class="title">Balok Green Tea</p>
+                        <p class="sub-title">Harga Satuan</p>
+                      </div>
+                      <div class="discount">
+                        <p>Diskon s/d 35%</p>
+                      </div>
+                      <div class="price">
+                        <p class="number">Rp 3.500</p>
+                        <p class="sold">129 pcs terjual</p>
+                      </div>
+                    </div>
+                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End List Menu -->
+
+          <!-- Modal Box Pesanan -->
+          <div class="modal-overlay" id="modal-overlay">
+            <div class="modal">
+              <div class="modal-content">
+                <div class="cta-back">
+                  <div class="cta-divider"></div>
+                </div>
+                <div class="head-modal">
+                  <div class="img-modal">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="img-modal"
+                      class="imgModal"
+                    />
+                  </div>
+
+                  <div class="text-head-modal">
+
+                    <div class="wrap-modal">
+                      <div class="title-product">
+                        <h4 class="text-modal">Balok Lumer Original</h4>
+                        <div class="desc-price">
+                          <p>Harga Satuan</p>
+                        </div>
+                      </div>
+                      <div class="stock">
+                        <p>Ready Stock</p>
+                      </div>
+                    </div>
+
+                    <div class="price-modal">
+                      <div class="pricem">
+                        <p>Rp 3.000</p>
+                      </div>
+                      <div class="total-buy">
+                        <p>129 pcs terjual</p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <hr class="line-divider">
+              <div class="choose">
+                <div class="title-choose">
+                  <p>Jumlah Isian</p>
+                  <div class="sub-title">
+                    <h5>Harus dipilih</h5>
+                    <h6>• Gratis Ongkir Minimal isi 5</h6>
+                  </div>
+                </div>
+              </div>
+              <hr class="line-divider-two">
+              <div class="product-modal">
+                <div class="product-choose">
+                  <div class="name-choose">
+                    <p class="isian">Isian 1</p>
+                    <p class="harga">3.000</p>
+                    <div class="checkbox">
+                      <input type="checkbox" id="rounded-checkbox">
+                      <label for="rounded-checkbox"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside>
+        <div class="container-aside">
+          <div class="wrap-aside">
+            <div class="items">
+              <img
+                src="assets/img/icon/home.svg"
+                alt=""
+                class="icon-aside icon-actived"
+              />
+              <a href="#">Home</a>
+            </div>
+            <div class="items">
+              <img
+                src="assets/img/icon/category.svg"
+                alt=""
+                class="icon-aside"
+              />
+              <a href="#">Kategori</a>
+            </div>
+            <div class="items">
+              <img
+                src="assets/img/icon/promotion.svg"
+                alt=""
+                class="icon-aside"
+              />
+              <a href="#">Promotion</a>
+            </div>
+            <div class="items">
+              <img src="assets/img/icon/ask.svg" alt="" class="icon-aside" />
+              <a href="#">Testimoni</a>
+            </div>
+            <div class="items">
+              <img src="assets/img/icon/about.svg" alt="" class="icon-aside" />
+              <a href="#">Tentang App</a>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
-  </header>
 
-  <div class="main-container">
-    <main>
-      <div class="container-content">
-        <!-- Hero -->
-        <div class="hero-container">
-          <div class="col">
-            <div class="slider">
-              <div class="banner-img">
-                <img src="assets/img/banner-1.svg" alt="banner.svg" />
-              </div>
-              <div class="banner-img">
-                <img src="assets/img/banner-2.svg" alt="banner.svg" />
-              </div>
+    <footer>
+      <div class="bottom-footer">
+        <div class="mitra">
+          <p class="mitra-head">Mitra Alfin Food Box</p>
+          <p class="sub-head">UMKM yang bekerjasama dengan kami</p>
+          <div class="wrap-mitra">
+            <div class="item">
+              <img src="assets/img/wr-1.svg" alt="mitra.svg" />
             </div>
-  
-            <div class="row">
-              <div class="position">
-                <span class="circle circle-actived"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-              </div>
-              <div class="cta-all">
-                <a href="#">Lihat Semua</a>
-              </div>
+            <div class="item">
+              <img src="assets/img/wr-3.svg" alt="mitra.svg" />
             </div>
-  
-          </div>
-        </div>
-        <!-- Hero end -->
-  
-        <!-- notification -->
-        <div class="notification">
-          <img src="assets/img/cart.svg" alt="icon.svg" class="icon-not">
-          <p>HALO LUR! KUE BALOK BUKA SEKARANG DEPAN PUSKESMAS IMOGIRI SAMPAI JAM 9 MALAM! Monggo gelak tutup ☺</p>
-        </div>
-        <!-- end notification -->
-  
-        <!-- categori -->
-        <div class="category">
-          <div class="col">
-            <h5>Pilihan Kategori</h5>
-            <div class="row">
-              <div class="container">
-                <div class="catcard">
-                  <img src="assets/img/cat-1.svg" alt="img-category" class="img-category">
-                  <p>Aneka Kue-Kuean</p>
-                </div>
-                <div class="catcard">
-                  <img src="assets/img/cat-2.svg" alt="img-category" class="img-category">
-                  <p>Jajanan Pasar</p>
-                </div>
-                <div class="catcard">
-                  <img src="assets/img/cat-3.svg" alt="img-category" class="img-category">
-                  <p>Makanan Besar</p>
-                </div>
-                <div class="catcard">
-                  <img src="assets/img/cat-4.svg" alt="img-category" class="img-category">
-                  <p>Minuman</p>
-                </div>
-                <div class="catcard">
-                  <img src="assets/img/cat-5.svg" alt="img-category" class="img-category">
-                  <p>Paket Pesanan</p>
-                </div>
-              </div>
+            <div class="item">
+              <img src="assets/img/wr-4.svg" alt="mitra.svg" />
+            </div>
+            <div class="item">
+              <img src="assets/img/wr-5.svg" alt="mitra.svg" />
+            </div>
+            <div class="item">
+              <img src="assets/img/wr-2.svg" alt="mitra.svg" />
+            </div>
+            <div class="item">
+              <img src="assets/img/wr-5.svg" alt="mitra.svg" />
+            </div>
+            <div class="item">
+              <img src="assets/img/wr-3.svg" alt="mitra.svg" />
             </div>
           </div>
         </div>
-        <!-- end categori -->
-  
-        
-        <!-- List Menu -->
-        <div class="menu">
-          <div class="col">
-            <h5>Spesial Hari ini</h5>
-            <p>Promo menarik hari ini</p>
-            <div class="row">
-              <div class="card-wrap">
-                <div class="wraped">
-                  <img src="assets/img/roti.svg" alt="card-wrap.svg" class="card-wrap-img">
-                  <div class="desc">
-                    <div class="head">
-                      <p class="title">Balok Lumer Original</p>
-                      <p class="sub-title">Harga Satuan</p>
-                    </div>
-                    <div class="discount">
-                      <p>Diskon s/d 35%</p>
-                    </div>
-                    <div class="price">
-                      <p class="number">Rp 3.000</p>
-                      <p class="sold">129 pcs terjual</p>
-                    </div>
-                  </div>
-                  <button class="cta-button" id="cta-pesan">
-                    Pesan
-                  </button>
-                </div>
-              </div>
-              <div class="card-wrap">
-                <div class="wraped">
-                  <img src="assets/img/roti.svg" alt="card-wrap.svg" class="card-wrap-img">
-                  <div class="desc">
-                    <div class="head">
-                      <p class="title">Balok Choco Crunchy</p>
-                      <p class="sub-title">Harga Satuan</p>
-                    </div>
-                    <div class="discount">
-                      <p>Diskon s/d 35%</p>
-                    </div>
-                    <div class="price">
-                      <p class="number">Rp 4.000</p>
-                      <p class="sold">129 pcs terjual</p>
-                    </div>
-                  </div>
-                  <button class="cta-button" id="cta-pesan">
-                    Pesan
-                  </button>
-                </div>
-              </div>
-              <div class="card-wrap">
-                <div class="wraped">
-                  <img src="assets/img/roti.svg" alt="card-wrap.svg" class="card-wrap-img">
-                  <div class="desc">
-                    <div class="head">
-                      <p class="title">Balok Lumer Taro</p>
-                      <p class="sub-title">Harga Satuan</p>
-                    </div>
-                    <div class="discount">
-                      <p>Diskon s/d 35%</p>
-                    </div>
-                    <div class="price">
-                      <p class="number">Rp 3.500</p>
-                      <p class="sold">129 pcs terjual</p>
-                    </div>
-                  </div>
-                  <button class="cta-button" id="cta-pesan">
-                    Pesan
-                  </button>
-                </div>
-              </div>
-              <div class="card-wrap">
-                <div class="wraped">
-                  <img src="assets/img/roti.svg" alt="card-wrap.svg" class="card-wrap-img">
-                  <div class="desc">
-                    <div class="head">
-                      <p class="title">Balok Strawberry</p>
-                      <p class="sub-title">Harga Satuan</p>
-                    </div>
-                    <div class="discount">
-                      <p>Diskon s/d 35%</p>
-                    </div>
-                    <div class="price">
-                      <p class="number">Rp 3.500</p>
-                      <p class="sold">129 pcs terjual</p>
-                    </div>
-                  </div>
-                  <button class="cta-button" id="cta-pesan">
-                    Pesan
-                  </button>
-                </div>
-              </div>
-              <div class="card-wrap">
-                <div class="wraped">
-                  <img src="assets/img/roti.svg" alt="card-wrap.svg" class="card-wrap-img">
-                  <div class="desc">
-                    <div class="head">
-                      <p class="title">Balok Lumer Keju</p>
-                      <p class="sub-title">Harga Satuan</p>
-                    </div>
-                    <div class="discount">
-                      <p>Diskon s/d 35%</p>
-                    </div>
-                    <div class="price">
-                      <p class="number">Rp 3.500</p>
-                      <p class="sold">129 pcs terjual</p>
-                    </div>
-                  </div>
-                  <button class="cta-button" id="cta-pesan">
-                    Pesan
-                  </button>
-                </div>
-              </div>
-              <div class="card-wrap">
-                <div class="wraped">
-                  <img src="assets/img/roti.svg" alt="card-wrap.svg" class="card-wrap-img">
-                  <div class="desc">
-                    <div class="head">
-                      <p class="title">Balok Green Tea</p>
-                      <p class="sub-title">Harga Satuan</p>
-                    </div>
-                    <div class="discount">
-                      <p>Diskon s/d 35%</p>
-                    </div>
-                    <div class="price">
-                      <p class="number">Rp 3.500</p>
-                      <p class="sold">129 pcs terjual</p>
-                    </div>
-                  </div>
-                  <button class="cta-button" id="cta-pesan">
-                    Pesan
-                  </button>
-                </div>
-              </div>
-  
-            </div>
-          </div>
-        </div>
-        <!-- End List Menu -->
+        <hr class="divider" />
+        <p class="copyright">Develop by nakamaiyan © 2023</p>
       </div>
-    </main>
-  
-    <aside>
-      <div class="container-aside">
-        <div class="wrap-aside">          
-          <div class="items">
-            <img src="assets/img/icon/home.svg" alt="" class="icon-aside icon-actived">
-            <a href="#">Home</a>
-          </div>
-          <div class="items">
-            <img src="assets/img/icon/category.svg" alt="" class="icon-aside">
-            <a href="#">Kategori</a>
-          </div>
-          <div class="items">
-            <img src="assets/img/icon/promotion.svg" alt="" class="icon-aside">
-            <a href="#">Promotion</a>
-          </div>
-          <div class="items">
-            <img src="assets/img/icon/ask.svg" alt="" class="icon-aside">
-            <a href="#">Testimoni</a>
-          </div>
-          <div class="items">
-            <img src="assets/img/icon/about.svg" alt="" class="icon-aside">
-            <a href="#">Tentang App</a>
-          </div>
-        </div>
-      </div>
-    </aside>
-  </div>
+    </footer>
 
-  <footer>
-    <div class="bottom-footer">
-      <div class="mitra">
-        <p class="mitra-head">Mitra Alfin Food Box</p>
-        <p class="sub-head">UMKM yang bekerjasama dengan kami</p>
-        <div class="wrap-mitra">
-          <div class="item">
-            <img src="assets/img/wr-1.svg" alt="mitra.svg">
-          </div>
-          <div class="item">
-            <img src="assets/img/wr-3.svg" alt="mitra.svg">
-          </div>
-          <div class="item">
-            <img src="assets/img/wr-4.svg" alt="mitra.svg">
-          </div>
-          <div class="item">
-            <img src="assets/img/wr-5.svg" alt="mitra.svg">
-          </div>
-          <div class="item">
-            <img src="assets/img/wr-2.svg" alt="mitra.svg">
-          </div>
-          <div class="item">
-            <img src="assets/img/wr-5.svg" alt="mitra.svg">
-          </div>
-          <div class="item">
-            <img src="assets/img/wr-3.svg" alt="mitra.svg">
-          </div>
-        </div>
-      </div>
-      <hr class="divider">
-      <p class="copyright">Develop by nakamaiyan © 2023</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
-</body>
-
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
