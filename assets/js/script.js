@@ -21,7 +21,42 @@ function nextSlide() {
 setInterval(nextSlide, 6000)
 
 // CTA product
+const heroBanner = document.querySelector(".hero-container")
+const notification = document.querySelector(".notification")
+const category = document.querySelector(".category")
+const menu = document.querySelector(".menu")
 const ctaBuy = document.querySelector("#cta-pesan")
+const modalOverlay = document.getElementById("modal-overlay")
+const ctaClose = document.querySelector(".cta-back")
+
 ctaBuy.addEventListener("click", function () {
-    console.log("pesanan ditentukan!")
+    modalOverlay.style.display = "flex";
+    modalOverlay.style.transform = "translateY(0%)";
+    modalOverlay.style.boxShadow = "5px 5px 12px rgba(0, 0, 0, 0.3)";
+    heroBanner.style.filter = "blur(2px)"
+    notification.style.filter = "blur(2px)"
+    category.style.filter = "blur(2px)"
+    menu.style.filter = "blur(2px)"
 })
+
+ctaClose.addEventListener("click", function () {
+    modalOverlay.style.cursor = "pointer";
+    modalOverlay.style.display = "none";
+    heroBanner.style.filter = "none"
+    notification.style.filter = "none"
+    category.style.filter = "none"
+    menu.style.filter = "none"
+})
+
+// Agar checkbox hanya dapat memilih salah satu saja
+const checkboxes = document.querySelectorAll(".custom-checkbox")
+
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
+      checkboxes.forEach(function (otherCheckbox) {
+        if (otherCheckbox !== checkbox) {
+          otherCheckbox.checked = false;
+        }
+      });
+    });
+  });

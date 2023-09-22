@@ -100,13 +100,13 @@ header {
 }
 
 .hero-container .col .row .position .circle-actived {
-  width: 10px;
-  height: 10px;
-  background-color: rgb(123, 32, 32);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 5px;
-  cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(123, 32, 32);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 .hero-container .col .row .cta-all {
@@ -294,7 +294,6 @@ header {
     font-weight: bold;
     line-height: 24px;
     font-size: 14px;
-
 }
 
 .menu .col .row .card-wrap .cta-button {
@@ -524,24 +523,30 @@ header {
 
 /* Modal Box */
 #modal-overlay {
-    max-width: 448px;
-    margin-bottom: 100px;
+    /* display: none; */
+    position: fixed;
+    bottom: 0;
+    width: 448px;
+    z-index: 999;
     padding: 12px;
     background-color: white;
     border-radius: 16px 16px 0px 0px;
+    transform: translateY(100%);
+    transition: opacity 0.3s;
 }
 
 #modal-overlay .modal {
-    /* border: 1px solid rgb(224, 224, 224); */
+    width: 100%;
 }
 
 #modal-overlay .modal .modal-content {
     display: flex;
     flex-direction: column;
+    /* border: 1px solid black; */
 }
 
 #modal-overlay .modal .modal-content .cta-back {
-    margin: 12px auto;
+    margin: 12px auto 32px auto;
     text-align: center;
     /* border: 1px solid yellow; */
     width: 100%;
@@ -695,7 +700,7 @@ header {
 }
 
 #modal-overlay .modal .line-divider-two {
-    margin: 24px 0px;
+    margin: 12px 0px;
     border-style: dashed;
     border-color: rgba(188, 188, 188, 0.2);
 }
@@ -709,54 +714,149 @@ header {
     flex-direction: row;
     align-items: center;
     flex-basis: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #modal-overlay .modal .product-modal .product-choose .name-choose .isian {
-    flex-basis: 50%;
-    font-weight: 600;
+    flex-basis: 60%;
+    font-weight: 500;
+    font-size: 16px;
+    /* font-size: 12x; */
+    /* border: 1px solid yellow; */
+}
+
+#modal-overlay .modal .product-modal .product-choose .name-choose .harga {
+    flex-basis: 30%;
+    text-align: right;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2d2d2d;
+}
+
+#modal-overlay .modal .product-modal .product-choose .name-choose .checkbox {
+    flex-basis: 10%;
+    text-align: right;
+    margin-top: 4px;
 }
 
 /* Gaya default untuk checkbox (sembunyikan) */
-input[type="checkbox"] {
-  display: none;
+#modal-overlay .modal .product-modal .product-choose .name-choose .checkbox input[type="checkbox"] {
+    display: none;
 }
 
 /* Gaya label yang menampilkan checkbox custom */
-label {
-  display: inline-block;
-  width: 24px; /* Lebar checkbox */
-  height: 24px; /* Tinggi checkbox */
-  background-color: #ccc; /* Warna latar belakang */
-  border-radius: 50%; /* Mengatur bentuk menjadi bulat */
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.3s, border 0.3s; /* Transisi perubahan warna */
+#modal-overlay .modal .product-modal .product-choose .name-choose .checkbox label {
+    display: inline-block;
+    width: 24px;
+    /*Lebarcheckbox*/
+    height: 24px;
+    /*Tinggicheckbox*/
+    background-color: #ededed;
+    /*Warnalatarbelakang*/
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    /*Mengaturbentukmenjadibulat*/
+    cursor: pointer;
+    position: relative;
+    transition:
+        background-color 0.3s,
+        border 0.3s;
 }
 
 /* Gaya label saat checkbox dicentang */
 input[type="checkbox"]:checked + label {
-  background-color: green; /* Warna latar belakang saat dicentang (hijau) */
-  border: 2px solid #ffffff; /* Border putih */
+    background-color: green; /* Warna latar belakang saat dicentang (hijau) */
+    border: 2px solid #ffffff; /* Border putih */
 }
 
 /* Gaya tanda centang (checkmark) */
 input[type="checkbox"] + label::before {
-  content: "";
-  position: absolute;
-  width: 10px; /* Lebar tanda centang */
-  height: 10px; /* Tinggi tanda centang */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid #fff; /* Warna dan ketebalan tanda centang */
-  border-top: none;
-  border-left: none;
-  border-radius: 0% 0% 0% 50%;
-  opacity: 0;
+    content: "";
+    position: absolute;
+    width: 20px;
+    /*Lebartandacentang*/
+    height: 20px;
+    /*Tinggitandacentang*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #c7c7c7;
+    background-color: green;
+    /*Warnadanketebalantandacentang*/
+    border-radius: 50%;
+    opacity: 0;
 }
 
 /* Gaya tanda centang saat checkbox dicentang */
 input[type="checkbox"]:checked + label::before {
-  opacity: 1;
+    opacity: 1;
+}
+
+#modal-overlay .modal .product-modal .product-choose .line-choose {
+    margin: 4px 0px;
+}
+
+.choose-add {
+    display: flex;
+    /* border: 1px solid red; */
+    margin: 0px 16px;
+}
+
+.cta-boxed {
+    cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+    padding: 16px 0px;
+    background-color: green;
+    font-size: 16px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 24px;
+    margin-bottom: 24px;
+}
+
+.cta-boxed:hover {
+    background-color: rgb(0, 73, 0);
+}
+
+.msg {
+    flex-basis: 90%;
+    /* border: 1px solid blue; */
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+}
+
+.cta-counter {
+    cursor: pointer;
+    border: 1px solid gray;
+    flex-basis: 30%;
+    max-width: 24px;
+    max-height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.counter-min {
+    color: gray;
+    border: 1px solid gainsboro;
+}
+
+.counter-add {
+    border: 1px solid green;
+    color: green;
+    background-color: rgb(230, 255, 230);
+}
+
+.value {
+    text-align: center;
 }
