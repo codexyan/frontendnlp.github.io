@@ -537,6 +537,7 @@ header {
 
 #modal-overlay .modal {
     width: 100%;
+    /* border: 1px solid red; */
 }
 
 #modal-overlay .modal .modal-content {
@@ -562,25 +563,37 @@ header {
 
 #modal-overlay .modal .modal-content .head-modal {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
     width: 100%;
+    gap: 16px;
+    padding: 0px 16px;
+
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* text-align: left; */
+    /* border: 1px solid black; */
 }
 
 #modal-overlay .modal .modal-content .head-modal .img-modal {
-    /* border: 1px solid red; */
-    width: 25%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ff0000; */
+    flex-basis: 22%;
+    /* margin-left: 16px; */
 }
 
 #modal-overlay .modal .modal-content .head-modal .img-modal .imgModal {
-    width: 100%;
+    width: 75px;
     height: 75px;
+    border-radius: 8%;
+    -webkit-border-radius: 8%;
+    -moz-border-radius: 8%;
+    -ms-border-radius: 8%;
+    -o-border-radius: 8%;
 }
 
 #modal-overlay .modal .modal-content .head-modal .text-head-modal {
-    /* border: 1px solid red; */
-    width: 75%;
+    /* border: 1px solid green; */
+    flex-basis: 88%;
     /* margin: 12px; */
 }
 
@@ -601,6 +614,7 @@ header {
 #modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .title-product .text-modal {
     text-align: left;
     width: 100%;
+    font-size: 14px;
 }
 
 #modal-overlay .modal .modal-content .head-modal .text-head-modal .desc-price {
@@ -628,7 +642,7 @@ header {
 }
 
 #modal-overlay .modal .modal-content .head-modal .text-head-modal .stock p {
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     padding: 4px 12px;
 }
@@ -798,6 +812,7 @@ input[type="checkbox"]:checked + label::before {
 
 .choose-add {
     display: flex;
+    align-items: center;
     /* border: 1px solid red; */
     margin: 0px 16px;
 }
@@ -827,6 +842,7 @@ input[type="checkbox"]:checked + label::before {
 
 .counter {
     display: flex;
+    align-items: center;
     flex-direction: row;
     flex-basis: 30%;
 }
@@ -835,15 +851,15 @@ input[type="checkbox"]:checked + label::before {
     cursor: pointer;
     border: 1px solid gray;
     flex-basis: 30%;
-    max-width: 24px;
-    max-height: 24px;
-    line-height: 24px;
+    max-width: 32px;
+    max-height: 32px;
+    line-height: 32px;
     text-align: center;
-    border-radius: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    -ms-border-radius: 24px;
-    -o-border-radius: 24px;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
 }
 
 .counter-min {
