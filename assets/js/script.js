@@ -60,3 +60,25 @@ checkboxes.forEach(function (checkbox) {
     });
   });
 });
+
+// Counter Pesanan Product
+const minButton = document.querySelector(".counter-min")
+const plusButton = document.querySelector(".counter-add")
+const counterElement = document.querySelector(".value")
+
+let counter = 0;
+
+function addToCounter() {
+  counter++
+  counterElement.textContent = counter;
+}
+
+function minFromCounter() {
+  if (counter > 0) {
+    counter--
+    counterElement.textContent = counter
+  }
+}
+
+plusButton.addEventListener("click", addToCounter)
+minButton.addEventListener("click", minFromCounter)
