@@ -107,7 +107,7 @@ const minButtons = document.querySelectorAll(".counter-min");
 const plusButtons = document.querySelectorAll(".counter-add");
 const counterElements = document.querySelectorAll(".value");
 
-let counter = 0;
+let counter = 1;
 
 function addToCounter() {
   counter++;
@@ -142,3 +142,7 @@ plusButtons.forEach((plusButton) => {
 minButtons.forEach((minButton) => {
   minButton.addEventListener("click", minFromCounter);
 });
+
+
+// --------------------------------
+// Hitung Harga

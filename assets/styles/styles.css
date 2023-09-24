@@ -590,6 +590,38 @@ header {
     padding: 0px 16px;
 }
 
+/* modal overlay 3 */
+#modal-overlay-3 .modal .modal-content .head-modal {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding: 0px 16px;
+}
+
+/* modal overlay 4 */
+#modal-overlay-4 .modal .modal-content .head-modal {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding: 0px 16px;
+}
+
+/* modal overlay 5 */
+#modal-overlay-5 .modal .modal-content .head-modal {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding: 0px 16px;
+}
+
+/* modal overlay 6 */
+#modal-overlay-6 .modal .modal-content .head-modal {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding: 0px 16px;
+}
+
 .modal-overlay .modal .modal-content .head-modal .img-modal {
     display: flex;
     align-items: center;
