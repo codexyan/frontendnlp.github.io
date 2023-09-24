@@ -522,9 +522,14 @@ header {
 }
 
 /* Modal Box */
-#modal-overlay {
-    /*display: none;
-    */position: fixed;
+.blur {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
     bottom: 0;
     width: 448px;
     z-index: 999;
@@ -533,31 +538,35 @@ header {
     border-radius: 16px 16px 0px 0px;
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -webkit-transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -moz-transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -ms-transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -o-transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-#modal-overlay .modal {
+.modal-overlay .show {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+}
+
+.modal-overlay .modal {
     width: 100%;
     /* border: 1px solid red; */
 }
 
-#modal-overlay .modal .modal-content {
+.modal-overlay .modal .modal-content {
     display: flex;
     flex-direction: column;
     /* border: 1px solid black; */
 }
 
-#modal-overlay .modal .modal-content .cta-back {
+.modal-overlay .modal .modal-content .cta-back {
     margin: 12px auto 32px auto;
     text-align: center;
     /* border: 1px solid yellow; */
     width: 100%;
 }
 
-#modal-overlay .modal .modal-content .cta-back .cta-divider {
+.modal-overlay .modal .modal-content .cta-back .cta-divider {
     background-color: rgb(179, 179, 179);
     width: 15%;
     height: 5px;
@@ -565,27 +574,29 @@ header {
     /* border: 1px solid red; */
 }
 
-#modal-overlay .modal .modal-content .head-modal {
+/* modal overlay 1 */
+#modal-overlay-1 .modal .modal-content .head-modal {
     display: flex;
     width: 100%;
     gap: 16px;
     padding: 0px 16px;
-
-    /* flex-direction: row; */
-    /* align-items: center; */
-    /* text-align: left; */
-    /* border: 1px solid black; */
 }
 
-#modal-overlay .modal .modal-content .head-modal .img-modal {
+/* modal overlay 2 */
+#modal-overlay-2 .modal .modal-content .head-modal {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    padding: 0px 16px;
+}
+
+.modal-overlay .modal .modal-content .head-modal .img-modal {
     display: flex;
     align-items: center;
-    /* border: 1px solid #ff0000; */
     flex-basis: 22%;
-    /* margin-left: 16px; */
 }
 
-#modal-overlay .modal .modal-content .head-modal .img-modal .imgModal {
+.modal-overlay .modal .modal-content .head-modal .img-modal .imgModal {
     width: 75px;
     height: 75px;
     border-radius: 8%;
@@ -595,33 +606,33 @@ header {
     -o-border-radius: 8%;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal {
     /* border: 1px solid green; */
     flex-basis: 88%;
     /* margin: 12px; */
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal {
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .title-product {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .title-product {
     display: flex;
     flex-direction: column;
     /* border: 1px solid red; */
     flex-grow: 1;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .title-product .text-modal {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .title-product .text-modal {
     text-align: left;
     width: 100%;
     font-size: 14px;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .desc-price {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .desc-price {
     color: gray;
     font-size: 12px;
     margin-bottom: 4px;
@@ -630,13 +641,13 @@ header {
     width: 100%;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal {
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .stock {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .wrap-modal .stock {
     /* flex-grow: 1; */
     background-color: green;
     margin-bottom: 8px;
@@ -645,55 +656,55 @@ header {
     height: max-content;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .stock p {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .stock p {
     font-size: 10px;
     color: white;
     padding: 4px 12px;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .pricem {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .pricem {
     flex-grow: 1;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .pricem p {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .pricem p {
     font-size: 20px;
     font-weight: bold;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .total-buy {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .total-buy {
     flex-grow: 1;
     text-align: right;
 }
 
-#modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .total-buy p {
+.modal-overlay .modal .modal-content .head-modal .text-head-modal .price-modal .total-buy p {
     font-size: 12px;
     color: rgb(168, 168, 168);
 }
 
-#modal-overlay .modal hr {
+.modal-overlay .modal hr {
     margin: 24px 0px;
     border-color: rgba(230, 230, 230, 0.2);
 }
 
-#modal-overlay .modal .choose {
+.modal-overlay .modal .choose {
     padding: 0px 16px;
     /* border: 1px solid red; */
 }
 
-#modal-overlay .modal .choose .title-choose {
+.modal-overlay .modal .choose .title-choose {
     display: flex;
     flex-direction: column;
     /* border: 1px solid yellow; */
 }
 
-#modal-overlay .modal .choose .title-choose p {
+.modal-overlay .modal .choose .title-choose p {
     width: 100%;
     color: black;
     font-weight: bold;
     font-size: 16px;
 }
 
-#modal-overlay .modal .choose .title-choose .sub-title {
+.modal-overlay .modal .choose .title-choose .sub-title {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -701,33 +712,33 @@ header {
     align-items: center;
 }
 
-#modal-overlay .modal .choose .title-choose .sub-title h5 {
+.modal-overlay .modal .choose .title-choose .sub-title h5 {
     color: green;
     font-size: 12px;
     font-weight: 600;
     /* border: 1px solid red; */
-    flex-basis: 25%;
+    flex-basis: 22%;
 }
 
-#modal-overlay .modal .choose .title-choose .sub-title h6 {
+.modal-overlay .modal .choose .title-choose .sub-title h6 {
     color: rgb(167, 167, 167);
     font-size: 12px;
     font-weight: 500;
     /* border: 1px solid blue; */
-    flex-basis: 75%;
+    flex-basis: 78%;
 }
 
-#modal-overlay .modal .line-divider-two {
+.modal-overlay .modal .line-divider-two {
     margin: 12px 0px;
     border-style: dashed;
     border-color: rgba(188, 188, 188, 0.2);
 }
 
-#modal-overlay .modal .product-modal {
+.modal-overlay .modal .product-modal {
     margin: 0 16px;
 }
 
-#modal-overlay .modal .product-modal .product-choose .name-choose {
+.modal-overlay .modal .product-modal .product-choose .name-choose {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -735,7 +746,7 @@ header {
     /* border: 1px solid red; */
 }
 
-#modal-overlay .modal .product-modal .product-choose .name-choose .isian {
+.modal-overlay .modal .product-modal .product-choose .name-choose .isian {
     flex-basis: 60%;
     font-weight: 500;
     font-size: 16px;
@@ -743,7 +754,7 @@ header {
     /* border: 1px solid yellow; */
 }
 
-#modal-overlay .modal .product-modal .product-choose .name-choose .harga {
+.modal-overlay .modal .product-modal .product-choose .name-choose .harga {
     flex-basis: 30%;
     text-align: right;
     font-weight: 400;
@@ -751,19 +762,19 @@ header {
     color: #2d2d2d;
 }
 
-#modal-overlay .modal .product-modal .product-choose .name-choose .checkbox {
+.modal-overlay .modal .product-modal .product-choose .name-choose .checkbox {
     flex-basis: 10%;
     text-align: right;
     margin-top: 4px;
 }
 
 /* Gaya default untuk checkbox (sembunyikan) */
-#modal-overlay .modal .product-modal .product-choose .name-choose .checkbox input[type="checkbox"] {
+.modal-overlay .modal .product-modal .product-choose .name-choose .checkbox input[type="checkbox"] {
     display: none;
 }
 
 /* Gaya label yang menampilkan checkbox custom */
-#modal-overlay .modal .product-modal .product-choose .name-choose .checkbox label {
+.modal-overlay .modal .product-modal .product-choose .name-choose .checkbox label {
     display: inline-block;
     width: 24px;
     /*Lebarcheckbox*/
@@ -810,7 +821,7 @@ input[type="checkbox"]:checked + label::before {
     opacity: 1;
 }
 
-#modal-overlay .modal .product-modal .product-choose .line-choose {
+.modal-overlay .modal .product-modal .product-choose .line-choose {
     margin: 4px 0px;
 }
 

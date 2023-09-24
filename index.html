@@ -120,6 +120,7 @@
               <h5>Spesial Hari ini</h5>
               <p>Promo menarik hari ini</p>
               <div class="row">
+                <!-- Card 1 -->
                 <div class="card-wrap">
                   <div class="wraped">
                     <img
@@ -133,16 +134,22 @@
                         <p class="sub-title">Harga Satuan</p>
                       </div>
                       <div class="discount">
-                        <p>Diskon s/d 35%</p>
+                        <p>PROMO</p>
                       </div>
                       <div class="price">
                         <p class="number">Rp 3.000</p>
                         <p class="sold">129 pcs terjual</p>
                       </div>
                     </div>
-                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                    <button
+                      class="cta-button cta-pesan"
+                      data-modal="modal-overlay-1"
+                    >
+                      Pesan
+                    </button>
                   </div>
                 </div>
+                <!-- Card 2 -->
                 <div class="card-wrap">
                   <div class="wraped">
                     <img
@@ -163,9 +170,14 @@
                         <p class="sold">129 pcs terjual</p>
                       </div>
                     </div>
-                    <button class="cta-button" id="cta-pesan">Pesan</button>
+                    <button 
+                      class="cta-button cta-pesan" 
+                      data-modal="modal-overlay-2">
+                      Pesan
+                    </button>
                   </div>
                 </div>
+                <!-- Card 3 -->
                 <div class="card-wrap">
                   <div class="wraped">
                     <img
@@ -189,6 +201,7 @@
                     <button class="cta-button" id="cta-pesan">Pesan</button>
                   </div>
                 </div>
+                <!-- Card 4 -->
                 <div class="card-wrap">
                   <div class="wraped">
                     <img
@@ -212,6 +225,7 @@
                     <button class="cta-button" id="cta-pesan">Pesan</button>
                   </div>
                 </div>
+                <!-- Card 5 -->
                 <div class="card-wrap">
                   <div class="wraped">
                     <img
@@ -235,6 +249,7 @@
                     <button class="cta-button" id="cta-pesan">Pesan</button>
                   </div>
                 </div>
+                <!-- Card 6 -->
                 <div class="card-wrap">
                   <div class="wraped">
                     <img
@@ -263,8 +278,10 @@
           </div>
           <!-- End List Menu -->
 
-          <!-- Modal Box Pesanan -->
-          <div class="modal-overlay" id="modal-overlay">
+          <!-- Modal PopUp -->
+          <!-- Modal Overlay 1-->
+          <div class="modal-overlay" id="modal-overlay-1">
+            <!-- Isi Modal -->
             <div class="modal">
               <div class="modal-content">
                 <div class="cta-back">
@@ -392,7 +409,146 @@
                 </div>
               </div>
               <div class="choose-cta">
-                <button class="cta-boxed">Pesan Sekarang <span class="fee-boxed"></span></button>
+                <button class="cta-boxed">
+                  Pesan Sekarang <span class="fee-boxed"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Overlay 2-->
+          <div class="modal-overlay" id="modal-overlay-2">
+            <!-- Isi Modal -->
+            <div class="modal">
+              <div class="modal-content">
+                <div class="cta-back">
+                  <div class="cta-divider"></div>
+                </div>
+                <div class="head-modal">
+                  <div class="img-modal">
+                    <img
+                      src="assets/img/roti.svg"
+                      alt="img-modal"
+                      class="imgModal"
+                    />
+                  </div>
+
+                  <div class="text-head-modal">
+                    <div class="wrap-modal">
+                      <div class="title-product">
+                        <h4 class="text-modal">Balok Choco Chrunchy</h4>
+                        <div class="desc-price">
+                          <p>Harga Satuan</p>
+                        </div>
+                      </div>
+                      <div class="stock">
+                        <p>Ready Stock</p>
+                      </div>
+                    </div>
+
+                    <div class="price-modal">
+                      <div class="pricem">
+                        <p>Rp 3.000</p>
+                      </div>
+                      <div class="total-buy">
+                        <p>129 pcs terjual</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="line-divider" />
+              <div class="choose">
+                <div class="title-choose">
+                  <p>Jumlah Isian</p>
+                  <div class="sub-title">
+                    <h5>Harus dipilih</h5>
+                    <h6>• Gratis Ongkir Minimal isi 5</h6>
+                  </div>
+                </div>
+              </div>
+              <hr class="line-divider-two" />
+              <div class="product-modal">
+                <div class="product-choose">
+                  <div class="name-choose">
+                    <p class="isian">Balok Original (isian 1)</p>
+                    <p class="harga">3.000</p>
+                    <div class="checkbox">
+                      <input
+                        type="checkbox"
+                        id="rounded-checkbox6"
+                        class="custom-checkbox"
+                      />
+                      <label for="rounded-checkbox6"></label>
+                    </div>
+                  </div>
+                  <hr class="line-choose" />
+                  <div class="name-choose">
+                    <p class="isian">Balok Original (isian 5)</p>
+                    <p class="harga">15.000</p>
+                    <div class="checkbox">
+                      <input
+                        type="checkbox"
+                        id="rounded-checkbox7"
+                        class="custom-checkbox"
+                      />
+                      <label for="rounded-checkbox7"></label>
+                    </div>
+                  </div>
+                  <hr class="line-choose" />
+                  <div class="name-choose">
+                    <p class="isian">Balok Original (isian 6)</p>
+                    <p class="harga">18.000</p>
+                    <div class="checkbox">
+                      <input
+                        type="checkbox"
+                        id="rounded-checkbox8"
+                        class="custom-checkbox"
+                      />
+                      <label for="rounded-checkbox8"></label>
+                    </div>
+                  </div>
+                  <hr class="line-choose" />
+                  <div class="name-choose">
+                    <p class="isian">Balok Original (isian 8)</p>
+                    <p class="harga">24.000</p>
+                    <div class="checkbox">
+                      <input
+                        type="checkbox"
+                        id="rounded-checkbox9"
+                        class="custom-checkbox"
+                      />
+                      <label for="rounded-checkbox9"></label>
+                    </div>
+                  </div>
+                  <hr class="line-choose" />
+                  <div class="name-choose">
+                    <p class="isian">Balok Original (isian 10)</p>
+                    <p class="harga">30.000</p>
+                    <div class="checkbox">
+                      <input
+                        type="checkbox"
+                        id="rounded-checkbox10"
+                        class="custom-checkbox"
+                      />
+                      <label for="rounded-checkbox10"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="line-divider-two" />
+              <div class="choose-add">
+                <div class="msg">Jumlah Pesanan</div>
+                <div class="counter">
+                  <div class="cta-counter counter-min">-</div>
+                  <div class="value">0</div>
+                  <div class="cta-counter counter-add">+</div>
+                </div>
+              </div>
+              <div class="choose-cta">
+                <button class="cta-boxed">
+                  Pesan Sekarang <span class="fee-boxed"></span>
+                </button>
               </div>
             </div>
           </div>
