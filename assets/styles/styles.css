@@ -168,6 +168,7 @@ header {
 }
 
 .category .col .row .container .catcard {
+    cursor: pointer;
     display: flex;
     row-gap: 8px;
     flex-direction: column;
