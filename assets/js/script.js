@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Counter Pesanan Product
-  let counter = 1;
   const minButtons = document.querySelectorAll(".counter-min");
   const plusButtons = document.querySelectorAll(".counter-add");
 
@@ -112,75 +111,109 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   plusButtons.forEach((plusButton, index) => {
-    plusButton.addEventListener("click", () => addToCounter(index));
+    plusButton.addEventListener("click", () => {
+      addToCounter(index);
+      const hargaText = hargaElements[index].textContent.trim();
+      updateTotalHarga(hargaText, index);
+    });
   });
 
   minButtons.forEach((minButton, index) => {
-    minButton.addEventListener("click", () => minFromCounter(index));
+    minButton.addEventListener("click", () => {
+      minFromCounter(index);
+      const hargaText = hargaElements[index].textContent.trim();
+      updateTotalHarga(hargaText, index);
+    });
   });
 
   // Hitung Harga Modal Layer 1
+  const ctaSubmit = document.querySelector(".cta-boxed");
   const feeBoxedElement = document.querySelector(".fee-boxed");
-
-  // Harga
-  const hargaElementsOri1 = document.querySelector(".name-choose:nth-child(1) .harga");
-
-  // debugging
-  if (hargaElementsOri1) {
-    const hargaText = hargaElementsOri1.textContent.trim();
-    const harga = parseInt(hargaText.replace(/\D/g, ""));
-    console.log("Harga dari checkbox1:", harga);
-  } else {
-    console.log("Elemen harga tidak ditemukan.");
-  }
-
-  // Checkbox
-  const checkbox1 = document.getElementById("rounded-checkbox1");
-  const checkbox2 = document.getElementById("rounded-checkbox2");
+  const hargaElements = document.querySelectorAll(".name-choose .harga");
 
   let isCheckboxChecked = false;
 
-  function updateTotalHarga() {
-    const hargaText = hargaElementsOri1.textContent.trim();
-    const harga = parseInt(hargaText.replace(/\D/g, ""));
-    const valueElementAtIndex0 = document.querySelector(
-      ".counter[data-index='0'] .value"
-    );
-    const valueAsNumber = parseInt(valueElementAtIndex0.textContent);
-    // Mengambil angka dari teks harga
+  function updateTotalHarga(hargaText) {
+    if (typeof hargaText === "string") {
+      const harga = parseInt(hargaText.replace(/\D/g, ""));
 
-    let totalHarga = harga * valueAsNumber;
+      const valueElementAtIndex0 = document.querySelector(
+        ".counter[data-index='0'] .value"
+      );
+      const valueAsNumber = parseInt(valueElementAtIndex0.textContent);
+      console.log(valueAsNumber);
 
-    if (isCheckboxChecked) {
-      console.log(counters);
-      console.log("hargaText:", hargaText);
-      console.log("harga:", harga);
-      console.log("totalHarga:", totalHarga);
-      console.log("berhasil");
-      feeBoxedElement.textContent = `- Rp ${totalHarga}`;
-    } else {
-      feeBoxedElement.textContent = "";
+      let totalHarga = harga * valueAsNumber;
+
+      if (isCheckboxChecked) {
+        feeBoxedElement.textContent = `- Rp ${totalHarga}`;
+        console.log(ctaSubmit.textContent);
+      } else {
+        feeBoxedElement.textContent = "";
+      }
     }
   }
 
+  const checkbox1 = document.getElementById("rounded-checkbox1");
+  const checkbox2 = document.getElementById("rounded-checkbox2");
+  const checkbox3 = document.getElementById("rounded-checkbox3");
+  const checkbox4 = document.getElementById("rounded-checkbox4");
+  const checkbox5 = document.getElementById("rounded-checkbox5");
+
   checkbox1.addEventListener("change", function () {
     isCheckboxChecked = checkbox1.checked;
-    updateTotalHarga();
+    const hargaText = isCheckboxChecked
+      ? hargaElements[0].textContent.trim()
+      : "0";
+    updateTotalHarga(hargaText);
   });
 
-  // checkbox2.addEventListener("change", function () {
-  //   // Periksa apakah checkbox2 dipilih
-  //   if (checkbox2.checked) {
-  //     const hargaText = document
-  //       .querySelector(".name-choose:nth-child(2) .harga")
-  //       .textContent.trim();
-  //     const harga = parseInt(hargaText.replace(/\D/g, ""));
+  checkbox2.addEventListener("change", function () {
+    isCheckboxChecked = checkbox2.checked;
+    const hargaText = isCheckboxChecked
+      ? hargaElements[1].textContent.trim()
+      : "0";
+    updateTotalHarga(hargaText);
+  });
 
-  //     // Sekarang Anda memiliki nilai harga yang sesuai dengan checkbox2 yang dipilih
-  //     console.log("Harga dari checkbox2:", harga);
-  //   }
+  checkbox3.addEventListener("change", function () {
+    isCheckboxChecked = checkbox3.checked;
+    const hargaText = isCheckboxChecked
+      ? hargaElements[2].textContent.trim()
+      : "0";
+    updateTotalHarga(hargaText);
+  });
 
-  //   // Panggil fungsi updateTotalHarga() di sini untuk menghitung total harga jika diperlukan
-  //   updateTotalHarga();
-  // });
+  checkbox4.addEventListener("change", function () {
+    isCheckboxChecked = checkbox4.checked;
+    const hargaText = isCheckboxChecked
+      ? hargaElements[3].textContent.trim()
+      : "0";
+    updateTotalHarga(hargaText);
+  });
+
+  checkbox5.addEventListener("change", function () {
+    isCheckboxChecked = checkbox5.checked;
+    const hargaText = isCheckboxChecked
+      ? hargaElements[4].textContent.trim()
+      : "0";
+    updateTotalHarga(hargaText);
+  });
+
+  // Send WhatsApp
+  ctaSubmit.addEventListener("click", function () {
+    const isianElement = document.querySelector(".name-choose .isian");
+    const isianValue = isianElement.textContent.trim();
+    const counterValue = document
+      .querySelector(".counter[data-index='0'] .value")
+      .textContent.trim();
+    const feeBoxedValue = feeBoxedElement.textContent.trim();
+    const pesan = `Halo min! Saya ingin pesan ${isianValue} berjumlah ${counterValue} dengan harga ${feeBoxedValue}, apakah bisa kak? Terimakasih`;
+    const nomorWhatsApp = "081393888145";
+    const WhatsappUrl = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(
+      pesan
+    )}`;
+
+    window.open(WhatsappUrl);
+  });
 });
