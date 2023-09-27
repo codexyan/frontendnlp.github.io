@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .textContent.trim();
     const feeBoxedValue = feeBoxedElement.textContent.trim();
     const pesan = `Halo min! Saya ingin pesan ${isianValue} berjumlah ${counterValue} dengan harga ${feeBoxedValue}, apakah bisa kak? Terimakasih`;
-    const nomorWhatsApp = "081393888145";
+    const nomorWhatsApp = "6281393888145";
     const WhatsappUrl = `https://wa.me/${nomorWhatsApp}?text=${encodeURIComponent(
       pesan
     )}`;
